@@ -22,6 +22,16 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
 
   data.map(merchant => {
     const { merchantName, _id, products } = merchant;
+    const {
+      product_id,
+      id,
+      images,
+      price,
+      product_type,
+      tags,
+      title,
+      vendor
+    } = products;
 
     const merchantNode = {
       id: _id,
