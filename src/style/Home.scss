@@ -19,6 +19,7 @@
   a {
     // float: right;
     justify-content: flex-end;
+    border: 0px;
   }
 }
 
@@ -26,4 +27,25 @@
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+.Home_Product__name {
+  font-size: 16px;
+  text-decoration: none;
+  color: #373737;
+  font-weight: 900;
+  text-align: center;
+  // margin-left: 16px;
+}
+.gallery {
+  a {
+    // float: right;
+    // justify-content: flex-end;
+    // border-bottom-color: 'white';
+    // text-align: center;
+  }
+}
+
+.containers{
+  margin:-15px 0;
 }
