@@ -20,24 +20,16 @@ const Tile = styled.div`
   }
 `;
 
-const Tiles = ({ data }) => (
+const Tiles = ({ merchants }) => (
   <Container>
-    {data.map(item => (
-      <Tile key={item.id}>
-        <Link
-          to="/blog"
-          data-item-id={item.id}
-          data-item-price={item.price}
-          data-item-image={item.images[0].src}
-          data-item-name={item.title}
-          data-item-url={`/`}
-        >
-          <img src="https://cdn.shopify.com/s/files/1/2367/7591/products/image_2cf16165-a42a-41c3-87f7-154d0426baba.jpg?v=1575044712" />
+    {merchants.edges.map(({ node: item }) => (
+      <Tile key={item._id}>
+        <Link to="/blog">
+          <img
+            src={item.products[0].images ? item.products[0].images[0].src : ""}
+          />
           <div>
-            <div className="Product__name">
-              {item.title}
-              <div>{item.price}</div>
-            </div>
+            <div className="Product__name">{item.merchantName}</div>
           </div>
         </Link>
       </Tile>

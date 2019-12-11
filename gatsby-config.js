@@ -21,6 +21,12 @@ module.exports = {
         autopop: true
       }
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-source-rest-api",
+      options: {
+        endpoints: ["https://apt-team-1.herokuapp.com/merchants/"]
+      }
+    }
   ]
 };

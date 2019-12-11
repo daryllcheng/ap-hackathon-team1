@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "author": "Stefano Verna <s.verna@datocms.com>",
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "circular-json": "^0.5.9",
     "datocms-client": "^2.0.7",
     "gatsby": "^2.18.10",
     "gatsby-image": "^2.2.8",
@@ -15,10 +17,12 @@
     "gatsby-plugin-snipcart": "^1.1.2",
     "gatsby-plugin-styled-components": "^3.1.16",
     "gatsby-source-datocms": "^2.1.15",
+    "gatsby-source-rest-api": "^0.2.1",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.0",
+    "request-promise": "^4.2.5",
     "styled-components": "^4.4.1"
   },
   "keywords": [
