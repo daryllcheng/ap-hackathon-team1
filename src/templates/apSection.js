@@ -37,7 +37,7 @@ const ApSection = (props) => (
     {console.log(props.data)}
     {props.data.map(item => (
       <Tile key={item.id}>
-        <Link to="/blog">
+        <Link to={props.data.src ? props.data.src : "#"}>
           <img
             src={item.src}
           />
