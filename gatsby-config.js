@@ -20,6 +20,7 @@ module.exports = {
           "OWE3MmZmMjQtNTk3Yi00OThhLWEwMmUtZDY4ZWM4NzIwYzZiNjM2NjM0Mzc1NzE0MTUwNzI1",
         autopop: true
       }
-    }
+    },
+    `gatsby-plugin-styled-components`
   ]
 };
