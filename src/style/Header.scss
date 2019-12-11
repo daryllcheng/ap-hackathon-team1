@@ -1,90 +1,167 @@
+.grey {
+  background-color: #eef1f3;
+}
+.yellow {
+  background-color: #fbdb56;
+}
 .Header {
-  background: #663399;
-  color: white;
-  border-bottom: 3px solid white;
-  box-shadow: 0 16px 0 black;
-  transform: rotateZ(8deg) skew(-2deg, -10deg) translateY(-10%);
-  margin: 50px;
-}
-
-.Header__body {
-  display: flex;
-  align-items: center;
-}
-
-.Header__title {
-  flex: 1;
-  padding: 20px 0;
-  font-family: "times new roman", times, serif;
-  font-style: italic;
-
-  a {
-    font-size: 6em;
-    font-weight: bold;
-    position: relative;
-    color: white;
+  background: #fff;
+  // width: 100%;
+  // display: inline-flex;
+  .headerContent {
+    padding: 16px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // vertical-align: middle;
+  }
+  .logo {
+    vertical-align: -webkit-baseline-middle;
+  }
+  .searchBar {
+    color:rgb(45, 49, 52);
+    display: inline-flex;
+    border-bottom: 1px solid rgb(96, 106, 114);
+    width: 35%;
+  }
+  .mainSearch {
+    width: 100%;
+    padding: 12px;
+    font-size:14px;
+    border: 1px solid #eef1f3;
+    // display: inline-flex;
+  }
+  .searchInput {
+    width: 100%;
+    border: 0px;
+  }
+  .searchInput:focus {
+    outline: none;
+  }
+  .headerRightSide {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .searchButton {
+    padding: 12px 20px;
+    color:rgb(96, 106, 114);
+    background-color: #eef1f3;
+    border: 0px;
+    font-family: 'Roboto';
+    font-size: 15px;
+  }
+  .anchorHeaderLink {
+    font-size: 14px;
     text-decoration: none;
-    display: block;
-    padding: 2px;
-
-    &:after, &:before {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      color: white;
-      background: #663399;
-      overflow: hidden;
-      clip: rect(0,900px,0,0);
-      display: block;
-      padding: 2px;
-    }
-
-    &:after {
-      left: 3px;
-      text-shadow: -2px 0 red;
-      animation: noise-anim 2s infinite linear alternate-reverse;
-    }
-
-    &:before {
-      content:attr(data-text);
-      left: -3px;
-      text-shadow: 2px 0 blue;
-      animation: noise-anim-2 3s infinite linear alternate-reverse;
-    }
+    color: #373737;
+    margin-left: 16px;
+  }
+  .anchorHeaderLink:hover {
+    border-bottom: 2px solid #fbdb56;
+  }
+  .buttonReset {
+    padding: 12px 20px;
+    color:rgb(96, 106, 114);
+    border: 0px;
+    font-size: 15px;
+    margin-left: 16px;
+  }
+}
+.headerMini {
+    display: flex;
+    border-bottom: 1px #eef1f3 solid;
+    border-top: 1px #eef1f3 solid;
+    padding: 1rem 0;
+  .anchorMiniLink {
+    font-size: 13px;
+    text-decoration: none;
+    color: #606a72;
+    justify-content: space-between;
+  }
+  .anchorMiniLink:hover {
+    border-bottom: 3px solid #fbdb56;
   }
 }
 
-.Header__summary {
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  cursor: pointer;
+// .Header__body {
+//   display: flex;
+//   align-items: center;
+// }
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+// .Header__title {
+//   flex: 1;
+//   padding: 20px 0;
+//   font-family: "times new roman", times, serif;
+//   font-style: italic;
 
-.Header__summary__line {
-  font-size: 0.8em;
-}
+//   a {
+//     font-size: 6em;
+//     font-weight: bold;
+//     position: relative;
+//     color: white;
+//     text-decoration: none;
+//     display: block;
+//     padding: 2px;
 
-@keyframes noise-anim {
-  $steps: 20;
+//     &:after, &:before {
+//       content: attr(data-text);
+//       position: absolute;
+//       top: 0;
+//       color: white;
+//       background: #663399;
+//       overflow: hidden;
+//       clip: rect(0,900px,0,0);
+//       display: block;
+//       padding: 2px;
+//     }
 
-  @for $i from 0 through $steps {
-    #{percentage($i * (1 / $steps))} {
-      clip:rect(random(100) + px, 9999px, random(100) + px, 0);
-    }
-  }
-}
+//     &:after {
+//       left: 3px;
+//       text-shadow: -2px 0 red;
+//       animation: noise-anim 2s infinite linear alternate-reverse;
+//     }
 
-@keyframes noise-anim-2 {
-  $steps: 20;
+//     &:before {
+//       content:attr(data-text);
+//       left: -3px;
+//       text-shadow: 2px 0 blue;
+//       animation: noise-anim-2 3s infinite linear alternate-reverse;
+//     }
+//   }
+// }
 
-  @for $i from 0 through $steps{
-    #{percentage($i * (1/$steps))}{
-      clip:rect(random(100) + px, 9999px, random(100) + px, 0);
-    }
-  }
-}
+// .Header__summary {
+//   text-decoration: none;
+//   color: white;
+//   text-align: center;
+//   cursor: pointer;
+
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
+
+// .Header__summary__line {
+//   font-size: 0.8em;
+// }
+
+// @keyframes noise-anim {
+//   $steps: 20;
+
+//   @for $i from 0 through $steps {
+//     #{percentage($i * (1 / $steps))} {
+//       clip:rect(random(100) + px, 9999px, random(100) + px, 0);
+//     }
+//   }
+// }
+
+// @keyframes noise-anim-2 {
+//   $steps: 20;
+
+//   @for $i from 0 through $steps{
+//     #{percentage($i * (1/$steps))}{
+//       clip:rect(random(100) + px, 9999px, random(100) + px, 0);
+//     }
+//   }
+// }

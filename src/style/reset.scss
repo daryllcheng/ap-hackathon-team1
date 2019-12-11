@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@font-face {
+  font-family: 'Gotham';
+  src: local('Gotham'), url(../fonts/gotham-cufonfonts/Gotham-Bold.otf) format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -39,5 +45,6 @@ table {
 }
 
 body {
-  background: linear-gradient(to bottom, white, cyan, white, MediumVioletRed, white, Green, white, cyan)
+  font-family: 'Roboto';
+  // background: linear-gradient(to bottom, white, cyan, white, MediumVioletRed, white, Green, white, cyan)
 }
