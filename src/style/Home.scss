@@ -15,11 +15,17 @@
     color: #373737;
     font-size: 30px;
     text-align: center;
+    width: 100%;
   }
   a {
     // float: right;
+    white-space: nowrap;
+    border-bottom: 5px solid #fcd8cd;
+    font-size: 13px;
+    // margin-left: auto;
     justify-content: flex-end;
-    border: 0px;
+    // border: 0px;
+    vertical-align: bottom;
   }
 }
 

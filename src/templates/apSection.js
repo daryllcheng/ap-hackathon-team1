@@ -26,30 +26,34 @@ const Tile = styled.div`
 `;
 
 const ApSection = (props) => (
-  <div>
-  <div className="title">
-<span className="mainTitle">{props.title}</span>
-  {/* <a>View All</a> */}
-  </div>
-<div className="subtitle">{props.subtitle}</div>
-  <div className="gallery">
-  <Container className="containers">
-    {console.log(props.data)}
-    {props.data.map(item => (
-      <Tile key={item.id}>
-        <Link to={props.data.src ? props.data.src : "#"}>
-          <img
-            src={item.src}
-          />
-          <div>
-            <div className="Home_Product__name">{item.merchantName}</div>
-          </div>
-        </Link>
-      </Tile>
-    ))}
-  </Container>
-  </div>
-  </div>
+  <div style={{marginBottom: '60px'}}>
+    <div className="title">
+      <span className="mainTitle" >{props.title}</span>
+      <a >View All</a>
+    </div>
+      <div className="subtitle">{props.subtitle}</div>
+      <div className="gallery">
+        { props.noDynamic === true ? (
+          <Container className="containers">
+            {console.log(props.data)}
+            {props.data.map(item => (
+              <Tile key={item.id}>
+                <Link to={props.data.src ? props.data.src : "#"}>
+                  <img
+                    src={item.src}
+                  />
+                  <div>
+                    <div className="Home_Product__name">{item.merchantName}</div>
+                  </div>
+                </Link>
+              </Tile>
+            ))}
+          </Container>
+        ) :
+          (<Tiles merchants={props.data} />)
+        }
+      </div>
+    </div>
 )
 
 export default ApSection;

@@ -37,6 +37,25 @@ const Home = (data) => (
     {/* <Tiles data={Mock.products} /> */}
     <ApSection 
       title="Most Popular" 
+      noDynamic={true}
+      subtitle="Top picks make the best gifts. Shop our most popular retailers." 
+      data={fakePopular}
+    />
+    <ApSection 
+      title="New Arrivals"
+      noDynamic={true} 
+      subtitle="See which partners just arrived—just in time for the holidays." 
+      data={fakePopular}
+    />
+    <ApSection 
+      title="Hot Items"
+      noDynamic={true} 
+      subtitle="Now Trending on Afterpay. Shop our most popular retailers." 
+      data={fakePopular}
+    />
+    <ApSection 
+      title="Most Popular"
+      noDynamic={true} 
       subtitle="Top picks make the best gifts. Shop our most popular retailers." 
       data={fakePopular}
     />
