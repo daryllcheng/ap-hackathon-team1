@@ -21,13 +21,13 @@ const Tile = styled.div`
 `;
 
 const ProductTiles = ({ products }) => (
-  <Container>
+  <Container className="containers">
     {products.map(product => (
       <Tile key={product.id}>
         <Link to={`/${product.id}`}>
           <img src={product.images ? product.images[0].src : ""} />
           <div>
-            <div className="Product__name">{product.title}</div>
+            <div className="Home_Product__name">{product.title}</div>
           </div>
         </Link>
       </Tile>

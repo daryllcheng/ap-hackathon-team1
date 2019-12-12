@@ -20,8 +20,8 @@ const Tile = styled.div`
   }
 `;
 
-const Tiles = ({ merchants }) => (
-  <Container>
+const MerchantTiles = ({ merchants }) => (
+  <Container className="containers">
     {merchants.edges.map(({ node: merchant }) => (
       <Tile key={merchant.id}>
         <Link to={`/merchant/${merchant.id}`}>
@@ -33,7 +33,7 @@ const Tiles = ({ merchants }) => (
             }
           />
           <div>
-            <div className="Product__name">{merchant.merchantName}</div>
+            <div className="Home_Product__name">{merchant.merchantName}</div>
           </div>
         </Link>
       </Tile>
@@ -41,4 +41,4 @@ const Tiles = ({ merchants }) => (
   </Container>
 );
 
-export default Tiles;
+export default MerchantTiles;

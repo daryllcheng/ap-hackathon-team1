@@ -2,3 +2,68 @@
   width: 100%;
   margin-top: 24px;
 }
+
+.title {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  .mainTitle {
+    justify-content: center;
+    // font-family: 'Roboto';
+    text-align: center;
+    color: #373737;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .merchantTitle {
+    font-size: 20vh;
+  }
+
+  a {
+    // float: right;
+    white-space: nowrap;
+    border-bottom: 5px solid #fcd8cd;
+    font-size: 13px;
+    // margin-left: auto;
+    justify-content: flex-end;
+    // border: 0px;
+    vertical-align: bottom;
+  }
+}
+
+.merchantSubtitle {
+  margin: 50px;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.subtitle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Home_Product__name {
+  font-size: 16px;
+  text-decoration: none;
+  color: #373737;
+  font-weight: 900;
+  text-align: center;
+  // margin-left: 16px;
+}
+.gallery {
+  a {
+    // float: right;
+    // justify-content: flex-end;
+    // border-bottom-color: 'white';
+    // text-align: center;
+  }
+}
+
+.containers {
+  margin: -15px 0;
+}
