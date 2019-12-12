@@ -22,14 +22,18 @@ const Tile = styled.div`
 
 const Tiles = ({ merchants }) => (
   <Container>
-    {merchants.edges.map(({ node: item }) => (
-      <Tile key={item._id}>
-        <Link to="/blog">
+    {merchants.edges.map(({ node: merchant }) => (
+      <Tile key={merchant.id}>
+        <Link to={`/merchant/${merchant.id}`}>
           <img
-            src={item.products[0].images ? item.products[0].images[0].src : ""}
+            src={
+              merchant.products[0].images
+                ? merchant.products[0].images[0].src
+                : ""
+            }
           />
           <div>
-            <div className="Product__name">{item.merchantName}</div>
+            <div className="Product__name">{merchant.merchantName}</div>
           </div>
         </Link>
       </Tile>
